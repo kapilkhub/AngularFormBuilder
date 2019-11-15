@@ -4,25 +4,25 @@ This repository is a basic Schematic implementation that serves as a starting po
 
 ### Testing
 
-To test locally, install `@angular-devkit/schematics-cli` globally and use the `schematics` command line tool. That tool acts the same as the `generate` command of the Angular CLI, but also has a debug mode.
+To test locally, install do `npm install`. It will install all the package from json.
 
-Check the documentation with
-```bash
-schematics --help
-```
 
-### Unit Testing
+### Build
 
-`npm run test` will run the unit tests, using Jasmine as a runner and test framework.
-
-### Publishing
-
-To publish, simply do:
+To build, simply do:
 
 ```bash
-npm run build
-npm publish
+npm run build:watch
 ```
+### Run
+
+To run 
+```bash
+schematics .:form-builder AdekAngular --dry-run=false --force
+```
+this command will generate component in Adek-Angular folder.
+
+
 
 That's it!
  
