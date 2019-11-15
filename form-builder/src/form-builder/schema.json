@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "id": "AdekAngularSchema",
+    "title": "Angular AppShell Options Schema",
+    "type": "object",
+    "description": "component generator.",
+    "long-description": "./app-shell-long.md",
+    "properties": {
+        "componentName": {
+            "type": "string",
+            "description": "name of the service",
+            "$default": {
+                "$source": "argv",
+                "index": 0
+            }
+        },
+        "controlsInRow":{
+            "enum": [1, 2, 3, 4],
+            "x-prompt": "Specify number of controls in row (default: 3)",
+            "default":3
+        }
+    }
+}

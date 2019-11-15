@@ -1,0 +1,23 @@
+{
+    "controls":[
+        {
+            "name":"firstName",
+            "validations":"Validator.maxLength(200), Validator.required",
+            "type":"text"
+        },
+        {
+            "name":"lastName",
+            "validations":"Validator.maxLength(200), Validator.required",
+            "type":"text"
+        },
+        {
+            "name":"age",
+            "validations":"Validator.max(99), Validator.min(10)",
+            "type":"text"
+        },
+        {
+            "name":"isAdult",
+            "type":"bool"
+        }
+    ]
+}

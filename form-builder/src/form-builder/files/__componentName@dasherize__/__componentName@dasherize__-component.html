@@ -1,0 +1,27 @@
+<form [formGroup]="group">
+    <%for(let i=0; Math.floor(getLength()/controlsInRow)>i;i++){%>
+    <div class="row">
+      <%for(let j=0; controlsInRow>j;j++){%>
+         <div class="col-sm-<%=12/controlsInRow%>">
+           <%let type = getControls()[j].type%>
+             <%=getHtmlControls(type).replace('#controlName#',getControls()[j].name)%>
+          
+        </div>
+         <%}%>
+            </div>
+      <%}%>
+      <%let offset = Math.floor(getLength()/controlsInRow)*controlsInRow %>
+      <%let remainder = getLength()-offset %>
+      <%if(remainder>0) {%>
+      <div class="row">
+       <%for(let k=0; k<remainder; k++ ) { %>
+            <div  class="col-sm-<%=12/controlsInRow%>">
+               <%let type = getControls()[k+offset].type%>
+               <%=getHtmlControls(type).replace('#controlName#',getControls()[k+offset].name)%>
+            
+            </div>
+            <%}%>
+   </div>
+<%}%>
+        
+</form>
