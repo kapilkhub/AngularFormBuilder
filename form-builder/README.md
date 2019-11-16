@@ -26,3 +26,5 @@ this command will generate component in Adek-Angular folder.
 
 That's it!
  
+### Component Configuration
+Currently,component configuration is being done in controls.json file. However, ideal solution should include controls configuration through x-prompt.
