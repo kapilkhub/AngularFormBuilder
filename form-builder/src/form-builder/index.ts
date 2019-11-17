@@ -1,13 +1,13 @@
 import { Rule, SchematicContext, Tree, url, apply, template, mergeWith } from '@angular-devkit/schematics';
 import { strings } from '@angular-devkit/core';
 import * as data from './controls.json'
-import { IFormBuilder } from './schema.js';
+
 
 
 
 // You don't have to export the function as default. You can also have more than one rule factory
 // per file.
-export function formBuilder(_options: IFormBuilder): Rule {
+export function formBuilder(_options: any): Rule {
   return (tree: Tree, _context: SchematicContext) => {
     const sourceTemplate = url("./files");
     console.log("you entered", _options.controlsInRow)
